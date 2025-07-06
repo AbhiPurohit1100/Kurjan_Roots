@@ -1,5 +1,7 @@
+// filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
 import sohamcutie from './assets/sohamcutie.png'
+
 const nameProperty = 'name';
   const genderProperty = 'gender';
   const statusProperty = 'status';
@@ -282,12 +284,9 @@ const personDescriptionTextBlock = () =>
     const nodes = familyData;
     diagram.model.addNodeDataCollection(nodes);
 
-    // Initially center on root:
+    // Initially zoom to fit the diagram
     diagram.addDiagramListener('InitialLayoutCompleted', () => {
-      const root = diagram.findNodeForKey('King George V');
-      if (!root) return;
-      diagram.scale = 0.6;
-      diagram.scrollToRect(root.actualBounds);
+      diagram.commandHandler.zoomToFit();
     });
 
     // Setup zoom to fit button
