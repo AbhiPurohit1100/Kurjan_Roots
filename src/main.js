@@ -1,36 +1,48 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
-import sohamcutie from './assets/sohamcutie.png'
 
 const nameProperty = 'name';
-  const genderProperty = 'gender';
-  const statusProperty = 'status';
-  const countProperty = 'count';
+const genderProperty = 'gender';
+const statusProperty = 'status';
+const countProperty = 'count';
 
-  const theme = {
-    colors: {
-      femaleBadgeBackground: '#FFCBEA',
-      maleBadgeBackground: '#A2DAFF',
-      femaleBadgeText: '#7A005E',
-      maleBadgeText: '#001C76',
-      kingQueenBorder: '#FEBA00',
-      princePrincessBorder: '#679DDA',
-      civilianBorder: '#58ADA7',
-      personText: '#383838',
-      personNodeBackground: '#FFFFFF',
-      selectionStroke: '#485670',
-      counterBackground: '#485670',
-      counterBorder: '#FFFFFF',
-      counterText: '#FFFFFF',
-      link: '#686E76'
-    },
-    fonts: {
-      badgeFont: 'bold 12px Poppins',
-      birthDeathFont: '14px Poppins',
-      nameFont: '500 18px Poppins',
-      counterFont: '14px Poppins'
-    }
-  };
+const theme = {
+  colors: {
+    femaleBadgeBackground: '#d7c2f7ff',         // Soft lavender
+    maleBadgeBackground: '#27436cff',           // Soft blue
+    femaleBadgeText: '#3b0764',               // Deep purple
+    maleBadgeText: '#f5f5f5ff',                 // Navy blue
+
+    kingQueenBorder: '#fbbf24',               // Amber
+    princePrincessBorder: '#60a5fa',          // Sky blue
+    civilianBorder: '#34d399',               //
+
+    personText: '#1e293b',                   
+    personNodeBackground: '#f1f5f9',          
+    selectionStroke: '#7c3aed',               
+
+    counterBackground: '#475569',             
+    counterBorder: '#64748b',                
+    counterText: '#f1f5f9',                   
+
+    link: '#ffffffff'                           
+  },
+  fonts: {
+    badgeFont: '600 12px Poppins',
+    birthDeathFont: '400 13px Poppins',
+    nameFont: '600 18px Poppins',
+    counterFont: '500 12px Poppins'
+  },
+
+  linkStyle: {
+    strokeWidth: 10,     // visible line width
+    strokeDashArray: null
+  }
+};
+
+
+
+
 
   // toggle highlight on mouse enter/leave
   // this sample also uses highlight for selection, so only unhighlight if unselected
@@ -373,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Khaam Ji',
-      gender: 'M', status: '', born: '', death: '', picture: sohamcutie,
+      gender: 'M', status: '', born: '', death: '',
       parent: 'Ukhou ji'
     },
     {
@@ -477,14 +489,6 @@ document.addEventListener('DOMContentLoaded', () => {
       parent: 'Harsh Dev'
     },
     
-    {
-      name: '',
-      gender: 'M', 
-      parent: 'Lalita prasad(Latu)'
-    },
-
-
-
     {
       name: 'Teekaram',
       gender: 'M',
@@ -1183,6 +1187,144 @@ document.addEventListener('DOMContentLoaded', () => {
       gender: 'M',
       parent: 'Brijmohan2'
     },
+    {
+      name: 'Indradev',
+      gender: 'M',
+      parent: 'Jgendra'
+    },
+    {
+      name: 'Gudadu(Govardhan)',
+      gender: 'M',
+      parent: 'Indradev'
+    },
+    {
+      name: 'Siddhi',
+      gender: 'M',
+      parent: 'Gudadu(Govardhan)'
+    },
+    {
+      name: 'Buddhi',
+      gender: 'M',
+      parent: 'Gudadu(Govardhan)'
+    },
+    {
+      name: 'Ramdutt',
+      gender: 'M',
+      parent: 'Gudadu(Govardhan)'
+    },
+    {
+      name: 'Amardev',
+      gender: 'M',
+      parent: 'Gudadu(Govardhan)'
+    },
+    {
+      name: 'jyoti2',
+      gender: 'M',
+      parent: 'Amardev'
+    },
+    {
+      name: 'Tungiram',
+      gender: 'M',
+      parent: 'Siddhi'
+    },
+    {
+      name: 'Dhaniram',
+      gender: 'M',
+      parent: 'Siddhi'
+    },
+    {
+      name: 'Madhavanand',
+      gender: 'M',
+      parent: 'Dhaniram'
+    },
+    {
+      name: 'Shambhuprasad',
+      gender: 'M',
+      parent: 'Madhavanand'
+    },
+    {
+      name: 'Alok',
+      gender: 'M',
+      parent: 'Shambhuprasad'
+    },{
+      name: 'Amod',
+      gender: 'M',
+      parent: 'Shambhuprasad'
+    },
+    {
+      name: 'Alochan',
+      gender: 'M',
+      parent: 'Shambhuprasad'
+    },
+    {
+      name: 'Shivansh',
+      gender: 'M',
+      parent: 'Alochan'
+    },
+    {
+      name: 'Dakshesh',
+      gender: 'M',
+      parent: 'Amod'
+    },
+    {
+      name: 'Ramkrishna',
+      gender: 'M',
+      parent: 'Tungiram'
+    },
+    {
+      name: 'Shiv Prasad Purohit',
+      gender: 'M',
+      parent: 'Ramkrishna'
+    },
+    {
+      name: 'Sashidharr',
+      gender: 'M',
+      parent: 'Ramkrishna'
+    },
+    {
+      name: 'Umesh',
+      gender: 'M',
+      parent: 'Sashidharr'
+    },
+    {
+      name: 'Aarav',
+      gender: 'M',
+      parent: 'Umesh'
+    },
+    {
+      name: 'Ashutosh(nandi)',
+      gender: 'M',
+      parent: 'Shiv Prasad Purohit'
+    },
+    {
+      name: 'Aanand(chandi)',
+      gender: 'M',
+      parent: 'Shiv Prasad Purohit'
+    },
+    {
+      name: 'Abhinav(abu)',
+      gender: 'M',
+      parent: 'Ashutosh(nandi)'
+    },
+    {
+      name: 'Aanchal',
+      gender: 'F',
+      parent: 'Ashutosh(nandi)'
+    },
+    {
+      name: 'ANshul',
+      gender: 'M',
+      parent: 'Aanand(chandi)'
+    },
+    {
+      name: 'Aditi',
+      gender: 'F',
+      parent: 'Aanand(chandi)'
+    },
+    
+
+    
+    
     
     
     
