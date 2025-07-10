@@ -30,8 +30,8 @@ const theme = {
   fonts: {
     badgeFont: '600 12px Poppins',
     birthDeathFont: '400 13px Poppins',
-    nameFont: '600 18px Poppins',
-    counterFont: '500 12px Poppins'
+    nameFont: '600 22px Poppins',
+    counterFont: '500 18px Poppins'
   },
 
   linkStyle: {
