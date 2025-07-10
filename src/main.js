@@ -1,6 +1,6 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
-
+import abhinav from "./assets/abhi.png"
 const nameProperty = 'name';
 const genderProperty = 'gender';
 const statusProperty = 'status';
@@ -1303,7 +1303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Abhinav(abu)',
-      gender: 'M',
+      gender: 'M',picture: abhinav,
       parent: 'Ashutosh(nandi)'
     },
     {

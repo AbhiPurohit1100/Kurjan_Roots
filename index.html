@@ -88,29 +88,39 @@ navbar input[type="text"] {
   background-color: #1e1e1e; /* NEW: soft dark background for clarity */
 }
 
-      .slide-panel {
-        position: fixed;
-        overflow-y: auto;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 80vw;
-        max-width: 400px;
-        padding: 20px;
-        background: var(--card-bg);
-        border-left: 1px solid var(--border);
-        box-shadow: -2px 0 8px rgba(0,0,0,0.08);
-        transition: transform 0.4s ease, visibility 0s linear 0.4s;
-        transform: translateX(100%);
-        z-index: 10;
-        visibility: hidden;
-      }
+.slide-panel {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80vw;                       /* default width (desktop) */
+  max-width: 400px;
+  padding: 20px;
+  background: var(--card-bg);
+  border-left: 1px solid var(--border);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, visibility 0s linear 0.4s;
+  transform: translateX(100%);
+  z-index: 10;
+  visibility: hidden;
+}
 
-      .slide-panel.open {
-        transform: translateX(0);
-        visibility: visible;
-        transition: transform 0.4s ease, visibility 0s;
-      }
+.slide-panel.open {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.4s ease, visibility 0s;
+}
+
+/* ✅ MOBILE OVERRIDE */
+@media (max-width: 600px) {
+  .slide-panel {
+    width: 40vw;
+    max-width: 260px;
+    border-left: none;
+    border-radius: var(--radius);
+  }
+}
 
 #closePersonInfo {
   position: absolute;
@@ -128,15 +138,7 @@ navbar input[type="text"] {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
-      @media (max-width: 600px) {
-  .slide-panel {
-    width: 40vw;
-    left: 2vw;
-    right: auto;
-    border-left: none;
-    border-radius: var(--radius);
-  }
-}
+
 
       @media (max-width: 600px) {
         .navbar {
