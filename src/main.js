@@ -272,14 +272,13 @@ const personDescriptionTextBlock = () =>
       );
 
 
-  const initDiagram = (divId) => {
+ const initDiagram = (divId) => {
     const diagram = new go.Diagram(divId, {
       layout: new go.TreeLayout({
         angle: 90,
         nodeSpacing: 60,
         layerSpacing: 100,
         layerStyle: go.TreeLayout.LayerUniform,
-
         // For compaction, make the last parents place their children in a bus
         treeStyle: go.TreeStyle.LastParents,
         alternateAngle: 90,
@@ -287,6 +286,10 @@ const personDescriptionTextBlock = () =>
         alternateAlignment: go.TreeAlignment.BottomRightBus,
         alternateNodeSpacing: 20
       }),
+      scrollMargin: 500, // Adds extra scrollable space around content
+      positionComputation: function (diagram, pos) {
+        return pos; // Allow unrestricted scrolling
+      },
       'toolManager.hoverDelay': 100,
       linkTemplate: createLinkTemplate(),
       model: new go.TreeModel({ nodeKeyProperty: 'name' })
@@ -357,9 +360,9 @@ const personDescriptionTextBlock = () =>
 
     // Call this at the end of initDiagram:
     setupSearch(diagram);
-  };
+};
 
-  // Show person info when a node is selected
+// Show person info when a node is selected
 function showPersonInfo() {
   const personInfo = document.getElementById('personInfo');
   if (personInfo) personInfo.classList.add('open');

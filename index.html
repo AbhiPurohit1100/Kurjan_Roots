@@ -54,7 +54,7 @@
         flex-wrap: wrap;
       }
 
-navbar input[type="text"] {
+.navbar input[type="text"] {
   padding: 6px 12px;
   font-size: 14px;
   border-radius: var(--radius);
@@ -86,6 +86,7 @@ navbar input[type="text"] {
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 20px 20px;
   background-color: #1e1e1e; /* NEW: soft dark background for clarity */
+  overflow: auto;
 }
 
 .slide-panel {
@@ -115,7 +116,7 @@ navbar input[type="text"] {
 /* ✅ MOBILE OVERRIDE */
 @media (max-width: 600px) {
   .slide-panel {
-    width: 40vw;
+    width: 20vw;
     max-width: 260px;
     border-left: none;
     border-radius: var(--radius);
