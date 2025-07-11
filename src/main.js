@@ -1,6 +1,8 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
 import abhinav from "./assets/abhi.png"
+import aditi from "./assets/aditi.jpg"
+import anshul from "./assets/anshul.jpg"
 const nameProperty = 'name';
 const genderProperty = 'gender';
 const statusProperty = 'status';
@@ -1275,7 +1277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       parent: 'Tungiram'
     },
     {
-      name: 'Shiv Prasad Purohit',
+      name: 'ShivPrasad',
       gender: 'M',
       parent: 'Ramkrishna'
     },
@@ -1297,12 +1299,12 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       name: 'Ashutosh(nandi)',
       gender: 'M',
-      parent: 'Shiv Prasad Purohit'
+      parent: 'ShivPrasad'
     },
     {
       name: 'Aanand(chandi)',
       gender: 'M',
-      parent: 'Shiv Prasad Purohit'
+      parent: 'ShivPrasad'
     },
     {
       name: 'Abhinav(abu)',
@@ -1316,14 +1318,37 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'ANshul',
-      gender: 'M',
+      gender: 'M', picture: anshul,
       parent: 'Aanand(chandi)'
     },
     {
       name: 'Aditi',
-      gender: 'F',
+      gender: 'F', picture: aditi,
       parent: 'Aanand(chandi)'
     },
+        {
+      name: 'Anvi',
+      gender: 'F',
+      parent: 'Umesh'
+    },
+    {
+      name: 'Vaishnavi',
+      gender: 'F',
+      parent: 'Alok'
+    },
+        {
+      name: 'Alankrita',
+      gender: 'F',
+      parent: 'Amod'
+    },
+    {
+      name: 'Vedika',
+      gender: 'F',
+      parent: 'Alochan'
+    },
+    
+    
+
     
 
     
