@@ -1,6 +1,7 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
-
+import ashutosh from "./assets/ashutosh.png"
+import anchal from "./assets/anchal.png"
 import abhinav from "./assets/abhi.png"
 import aditi from "./assets/aditi.jpg"
 import anshul from "./assets/anshul.jpg"
@@ -342,25 +343,34 @@ const personDescriptionTextBlock = () =>
       const searchBox = document.getElementById('searchBox');
       const searchBtn = document.getElementById('searchBtn');
 
-      function searchAndFocus() {
-        const name = searchBox.value.trim();
-        if (!name) return;
-        const node = diagram.findNodeForKey(name);
-        if (node) {
-          diagram.select(node);
-          diagram.centerRect(node.actualBounds);
-          diagram.scrollToRect(node.actualBounds);
-          node.isSelected = true;
-        } else {
-          alert('No node found with that name.');
-        }
-      }
+function searchAndFocus() {
+  const name = searchBox.value.trim().toLowerCase();
+  if (!name) return;
 
-      searchBtn.addEventListener('click', searchAndFocus);
-      searchBox.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') searchAndFocus();
-      });
+  let foundNode = null;
+
+  diagram.nodes.each((node) => {
+    const nodeKey = String(node.key).toLowerCase();
+    if (nodeKey === name) {
+      foundNode = node;
     }
+  });
+
+  if (foundNode) {
+    diagram.select(foundNode);
+    diagram.centerRect(foundNode.actualBounds);
+    diagram.scrollToRect(foundNode.actualBounds);
+    foundNode.isSelected = true;
+  } else {
+    alert('No node found with that name.');
+  }
+}
+
+searchBtn.addEventListener('click', searchAndFocus);
+searchBox.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') searchAndFocus();
+})};
+
 
     // Call this at the end of initDiagram:
     setupSearch(diagram);
@@ -1279,6 +1289,11 @@ document.addEventListener('DOMContentLoaded', () => {
       parent: 'Tungiram'
     },
     {
+      name: 'Gyandev',
+      gender: 'M',
+      parent: 'Tungiram'
+    },
+    {
       name: 'ShivPrasad',
       gender: 'M', picture: shivprasad,
       parent: 'Ramkrishna'
@@ -1300,7 +1315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Ashutosh(nandi)',
-      gender: 'M',
+      gender: 'M', picture: ashutosh,
       parent: 'ShivPrasad'
     },
     {
@@ -1314,8 +1329,8 @@ document.addEventListener('DOMContentLoaded', () => {
       parent: 'Ashutosh(nandi)'
     },
     {
-      name: 'Aanchal',
-      gender: 'F',
+      name: 'Anchal',
+      gender: 'F',picture: anchal,
       parent: 'Ashutosh(nandi)'
     },
     {
