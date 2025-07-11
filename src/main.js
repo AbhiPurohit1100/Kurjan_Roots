@@ -1329,12 +1329,12 @@ document.addEventListener('DOMContentLoaded', () => {
       parent: 'Ashutosh(nandi)'
     },
     {
-      name: 'Anchal',
+      name: 'Dr.Anchal',
       gender: 'F',picture: anchal,
       parent: 'Ashutosh(nandi)'
     },
     {
-      name: 'ANshul',
+      name: 'Anshul ',
       gender: 'M', picture: anshul,
       parent: 'Aanand(chandi)'
     },
