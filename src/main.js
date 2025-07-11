@@ -6,6 +6,8 @@ import abhinav from "./assets/abhi.png"
 import aditi from "./assets/aditi.jpg"
 import anshul from "./assets/anshul.jpg"
 import shivprasad from "./assets/shivprasad.jpg"
+import { inject } from '@vercel/analytics';
+inject();
 const nameProperty = 'name';
 const genderProperty = 'gender';
 const statusProperty = 'status';
