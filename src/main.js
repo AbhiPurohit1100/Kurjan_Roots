@@ -1,8 +1,10 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
+import { Analytics } from "@vercel/analytics/next"
 import abhinav from "./assets/abhi.png"
 import aditi from "./assets/aditi.jpg"
 import anshul from "./assets/anshul.jpg"
+import shivprasad from "./assets/shivprasad.jpg"
 const nameProperty = 'name';
 const genderProperty = 'gender';
 const statusProperty = 'status';
@@ -1278,7 +1280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'ShivPrasad',
-      gender: 'M',
+      gender: 'M', picture: shivprasad,
       parent: 'Ramkrishna'
     },
     {
@@ -1368,4 +1370,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       initDiagram('myDiagramDiv');
     }, 300);
+    <Analytics/>
   });
