@@ -1,7 +1,6 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
-import { Analytics } from "@vercel/analytics/next"
-import { inject } from "@vercel/analytics"
+
 import abhinav from "./assets/abhi.png"
 import aditi from "./assets/aditi.jpg"
 import anshul from "./assets/anshul.jpg"
@@ -1365,12 +1364,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   window.addEventListener('DOMContentLoaded', () => {
-    inject()
     // setTimeout only to ensure font is loaded before loading diagram
     // you may want to use an asset loading library for this
     // to keep this sample simple, it does not
     setTimeout(() => {
       initDiagram('myDiagramDiv');
     }, 300);
-    
   });
