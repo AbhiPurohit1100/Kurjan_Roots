@@ -1,6 +1,8 @@
 // filepath: c:\Users\Abhinav\Desktop\Kurjhan\flow1gojs\family-tree\src\main.js
 import * as go from 'gojs';
 import ashutosh from "./assets/ashutosh.png"
+import mahesh from "./assets/Mahesh.jpg"
+import maheshson from "./assets/MaheshSon.jpg"
 import anchal from "./assets/anchal.png"
 import abhinav from "./assets/abhi.png"
 import aditi from "./assets/aditi.jpg"
@@ -1103,7 +1105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Mahesh',
-      gender: 'M',
+      gender: 'M', picture: mahesh,
       parent: 'Dharmanand'
     },
     {
@@ -1118,7 +1120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Dhananjay',
-      gender: 'M',
+      gender: 'M', picture: maheshson,
       parent: 'Mahesh'
     },
 
