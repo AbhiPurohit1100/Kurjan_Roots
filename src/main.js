@@ -1092,6 +1092,42 @@ document.addEventListener('DOMContentLoaded', () => {
       parent: 'Dayaram'
     },
     {
+      name: 'Yogesh',
+      gender: 'M',
+      parent: 'Dharmanand'
+    },
+    {
+      name: 'Devesh',
+      gender: 'M',
+      parent: 'Dharmanand'
+    },
+    {
+      name: 'Mahesh',
+      gender: 'M',
+      parent: 'Dharmanand'
+    },
+    {
+      name: 'Ishant',
+      gender: 'M',
+      parent: 'Yogesh'
+    },
+    {
+      name: 'Parth',
+      gender: 'M',
+      parent: 'Devesh'
+    },
+    {
+      name: 'Dhananjay',
+      gender: 'M',
+      parent: 'Mahesh'
+    },
+
+
+
+
+
+
+    {
       name: 'Revati nand',
       gender: 'M',
       parent: 'Dayaram'
